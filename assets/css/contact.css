@@ -1,27 +1,191 @@
+/* Fichier: /assets/css/index.css */
+
+/* --- Variables de Couleurs (Optionnel, mais recommandé) --- */
+:root {
+    --primary-color: #1DB954; /* Un vert souvent associé au streaming musical */
+    --secondary-color: #1AA761;
+    --dark-color: #191414; /* Noir profond */
+    --light-color: #F8F9FA;
+    --text-color: #333;
+}
+
 body {
-  background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-color);
 }
 
-h1 {
-  color: #343a40;
+/* --- NAVBAR --- */
+.fixed-top {
+    z-index: 1030; /* Assure que la barre de navigation reste au-dessus du contenu */
+    border-bottom: 2px solid var(--primary-color);
 }
 
-form {
-  border: 1px solid #dee2e6;
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
 }
 
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+
+/* --- HERO SECTION --- */
+.hero-section {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    background-color: var(--dark-color);
+    padding: 3rem;
+    border: 1px solid var(--secondary-color);
+    /* Les images de fond sont définies dans le HTML avec le style inline pour cet exemple */
+}
+
+.hero-section h1 {
+    color: white;
+}
+
+.hero-section p.lead {
+    color: #DDDDDD;
+}
+
+/* --- BUTTONS (Utilise les couleurs personnalisées) --- */
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #004085;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 
-/* Footer */
+.btn-outline-light:hover {
+    color: var(--dark-color) !important;
+    background-color: white;
+}
+
+
+/* --- FEATURES SECTION --- */
+.feature-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.feature-item i {
+    color: var(--primary-color);
+}
+
+/* --- PLAYLISTS POPULAIRES --- */
+.playlist-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Pour l'effet sur l'image */
+}
+
+.playlist-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.playlist-card img {
+    height: 200px; /* Taille fixe pour les images de playlist */
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.playlist-card:hover img {
+    transform: scale(1.1); /* Zoom léger au survol */
+}
+
+/* --- ARTISTS SECTION (Supprimée dans l'HTML final car remplacée par un carrousel Albums) --- */
+/*
+.artists-section {
+    padding-bottom: 5rem;
+}
+
+.artist-card {
+    background-color: #FFF;
+    border: 1px solid #EEE;
+    transition: background-color 0.3s;
+}
+
+.artist-card:hover {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.artist-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+}
+*/
+
+/* --- EXCLUSIVE ALBUMS (Carrousel) --- */
+.exclusive-albums-section .carousel-item {
+    padding: 20px 0;
+}
+
+.exclusive-album-img {
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+
+/* --- TESTIMONIALS --- */
+.blockquote {
+    border-radius: 0.5rem;
+}
+
+/* --- CALL TO ACTION (CTA) --- */
+.cta-section {
+    background-color: var(--primary-color);
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--dark-color) !important;
+}
+
+footer a {
+    color: #AAAAAA !important;
+    transition: color 0.3s;
+}
+
 footer a:hover {
-  color: #0d6efd; /* couleur bleue au survol */
-  text-decoration: none;
+    color: var(--primary-color) !important;
+}
+
+/* --- MEDIA QUERIES pour la réactivité --- */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 400px;
+        text-align: center;
+    }
+    .hero-section .row > div {
+        text-align: center;
+    }
+    .exclusive-album-img {
+        margin-bottom: 20px;
+    }
 }

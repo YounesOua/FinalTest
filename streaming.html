@@ -11,27 +11,20 @@
 </head>
 
 <body>
-    <header class="bg-dark text-white shadow-sm fixed-top">
+    <header class="bg-dark text-white p-3 shadow-sm fixed-top">
         <nav class="navbar navbar-expand-lg navbar-dark container">
             <a class="navbar-brand fw-bold" href="index.html">
                 <i class="fas fa-headphones-alt me-2"></i>Streaming Musical
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="streaming.html">Streaming</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link btn btn-primary btn-sm ms-lg-3" href="login.html">Mon Compte</a></li>
+                    <li class="nav-item"><a class="nav-link " href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="streaming.html">Streaming</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
@@ -155,14 +148,54 @@
 
     </main>
 
-    <footer class="bg-dark text-white stream-footer py-4 mt-5">
-        <div class="container text-center">
-            <p class="mb-2">&copy; 2024 Streaming Musical. Tous droits réservés.</p>
-            <p class="mb-0">
-                <a href="#" class="text-decoration-none text-primary mx-2"><i class="fab fa-facebook-f"></i></a> 
-                <a href="#" class="text-decoration-none text-primary mx-2"><i class="fab fa-twitter"></i></a> 
-                <a href="#" class="text-decoration-none text-primary mx-2"><i class="fab fa-instagram"></i></a>
-            </p>
+   <footer class="bg-dark text-white p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold mb-3">Streaming Musical</h5>
+                    <p class="small text-muted">La plateforme idéale pour les mélomanes exigeants. Écoutez, découvrez, partagez.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <h5 class="mb-3">Découvrir</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Artistes</a></li>
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Playlists</a></li>
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Nouveautés</a></li>
+                        <li><a href="subscription.html" class="text-muted text-decoration-none small">Premium</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <h5 class="mb-3">Aide</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-muted text-decoration-none small">FAQ</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none small">Support</a></li>
+                        <li><a href="terms.html" class="text-muted text-decoration-none small">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html" class="text-muted text-decoration-none small">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="mb-3">S'inscrire à la Newsletter</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control form-control-sm" placeholder="Votre email" aria-label="Votre email" required>
+                            <button class="btn btn-primary btn-sm" type="submit">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="text-center pt-4 border-top border-secondary mt-4">
+                <p class="small text-muted mb-0">&copy; 2024 Streaming Musical. Tous droits réservés.</p>
+            </div>
+
         </div>
     </footer>
     

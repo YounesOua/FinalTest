@@ -3,79 +3,161 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact</title>
+    <title>Contact - Streaming Musical</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/contact.css">
-
-</head>
+  </head>
 
   <body>
-    <!-- ===== HEADER ===== -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Streaming Musical</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Accueil</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="streaming.html">Streaming</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <header class="bg-dark text-white p-3 shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-headphones-alt me-2"></i>Streaming Musical
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- ===== MAIN ===== -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="streaming.html">Streaming</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div style="height: 70px;"></div>
+
     <main class="container my-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <h1 class="mb-4 text-center">Contactez-nous</h1>
-          <form class="shadow p-4 rounded bg-white" action="#" method="post">
-            <div class="mb-3">
-              <label for="name" class="form-label">Nom</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+      <h1 class="text-center mb-2 contact-title"><i class="fas fa-envelope-open-text me-2"></i>Besoin d'aide ? Contactez-nous !</h1>
+      <p class="text-center lead text-muted mb-5">Notre équipe est là pour vous assister, que ce soit pour le support technique ou les questions commerciales.</p>
+
+      <div class="row g-5">
+        
+        <div class="col-lg-6">
+          <h2 class="mb-4">Envoyez-nous un message</h2>
+          <form class="shadow p-4 rounded bg-white contact-form" action="#" method="post">
+            
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Nom</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="votre@email.fr" required>
+                </div>
             </div>
 
             <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="Votre email" required>
+              <label for="subject" class="form-label">Sujet</label>
+              <select class="form-select" id="subject" name="subject" required>
+                <option selected disabled value="">Choisissez un sujet...</option>
+                <option value="support">Support Technique / Problème Compte</option>
+                <option value="billing">Facturation / Abonnement</option>
+                <option value="artist">Question Artiste / Droits</option>
+                <option value="other">Autre / Général</option>
+              </select>
             </div>
 
             <div class="mb-3">
               <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Expliquez-nous votre requête ici..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+            <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" value="" id="newsletterCheck">
+                <label class="form-check-label small text-muted" for="newsletterCheck">
+                    Je souhaite recevoir la newsletter hebdomadaire.
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 btn-lg">Envoyer le message</button>
           </form>
+        </div>
+
+        <div class="col-lg-6">
+            <h2 class="mb-4">Autres moyens de nous contacter</h2>
+            
+            <div class="p-4 rounded-3 mb-4 info-card">
+                <h4 class="text-primary mb-3"><i class="fas fa-info-circle me-2"></i>Informations générales</h4>
+                <ul class="list-unstyled">
+                    <li class="mb-3"><i class="fas fa-map-marker-alt me-3 text-primary"></i> 10 Rue de la Musique, 75001 Paris, France</li>
+                    <li class="mb-3"><i class="fas fa-phone me-3 text-primary"></i> +33 1 23 45 67 89 (Du lundi au vendredi)</li>
+                    <li><i class="fas fa-envelope me-3 text-primary"></i> support@streamingmusical.fr</li>
+                </ul>
+            </div>
+
+            <div class="p-4 rounded-3 mb-4 info-card">
+                <h4 class="text-primary mb-3"><i class="fas fa-question-circle me-2"></i>Questions fréquentes (FAQ)</h4>
+                <p>Beaucoup de réponses se trouvent déjà dans notre section FAQ :</p>
+                <a href="faq.html" class="btn btn-outline-dark w-100"><i class="fas fa-link me-2"></i>Consulter la FAQ complète</a>
+            </div>
+
+            <h4 class="mb-3"><i class="fas fa-location-dot me-2"></i>Notre emplacement</h4>
+            <div class="map-container rounded-3 overflow-hidden shadow">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.7335626884633!2d2.336154515674706!3d48.86016147928751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2965415277%3A0x63a34a1599a0a09e!2sLouvre%20Museum!5e0!3m2!1sen!2sfr!4v1677777777777!5m2!1sen!2sfr" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
         </div>
       </div>
     </main>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="bg-dark text-white py-4 mt-5">
-      <div class="container text-center">
-        <div class="mb-2">
-          <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
-          <a href="#" class="text-white mx-2"><i class="bi bi-twitter fs-4"></i></a>
-          <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
-          <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
+    <footer class="bg-dark text-white p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold mb-3">Streaming Musical</h5>
+                    <p class="small text-muted">La plateforme idéale pour les mélomanes exigeants. Écoutez, découvrez, partagez.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <h5 class="mb-3">Découvrir</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Artistes</a></li>
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Playlists</a></li>
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Nouveautés</a></li>
+                        <li><a href="subscription.html" class="text-muted text-decoration-none small">Premium</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <h5 class="mb-3">Aide</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-muted text-decoration-none small">FAQ</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none small">Support</a></li>
+                        <li><a href="terms.html" class="text-muted text-decoration-none small">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html" class="text-muted text-decoration-none small">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="mb-3">S'inscrire à la Newsletter</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control form-control-sm" placeholder="Votre email" aria-label="Votre email" required>
+                            <button class="btn btn-primary btn-sm" type="submit">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="text-center pt-4 border-top border-secondary mt-4">
+                <p class="small text-muted mb-0">&copy; 2024 Streaming Musical. Tous droits réservés.</p>
+            </div>
+
         </div>
-        <small>&copy; 2025 MonSite. Tous droits réservés.</small>
-      </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
