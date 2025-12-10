@@ -1,5 +1,5 @@
 body {
-  background-color: g#f8f9fa;
+  background-color: #f8f9fa;
 }
 
 h1 {
@@ -18,4 +18,10 @@ form {
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #004085;
+}
+
+/* Footer */
+footer a:hover {
+  color: #0d6efd; /* couleur bleue au survol */
+  text-decoration: none;
 }

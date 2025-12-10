@@ -5,83 +5,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Streaming Musical</title>
-    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/index.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <div class="bg-dark text-white p-3">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">Streaming Musical</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <header class="bg-dark text-white p-3 shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-headphones-alt me-2"></i>Streaming Musical
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="streaming.html">Streaming</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="streaming.html">Streaming</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary btn-sm ms-lg-3" href="login.html">Connexion / Inscription</a></li>
+                </ul>
             </div>
         </nav>
-    </div>
+    </header>
+    <div style="height: 70px;"></div>
 
 
-    <!-- HERO -->
-    <section class="container my-5 hero-section">
+    <section class="container my-5 hero-section text-white rounded-3 p-5" style="background-image: url('/assets/img/hero_bg.webp'); background-size: cover; background-position: center;">
         <div class="row align-items-center">
-            <div class="col-md-6">
-                <h1 class="display-5 fw-bold mb-4">Bienvenue sur notre plateforme de Streaming Musical</h1>
-                <p class="lead">
-                    Profitez d’une expérience musicale immersive : playlists, artistes tendances, albums exclusifs et recommandations personnalisées.
+            <div class="col-md-7">
+                <h1 class="display-5 fw-bold mb-4">Écoutez la musique que vous aimez. Où vous voulez. Quand vous voulez.</h1>
+                <p class="lead mb-4">
+                    Découvrez des millions de titres, créez vos propres playlists et accédez à des albums exclusifs. Votre expérience musicale commence ici.
                 </p>
-                <a href="streaming.html" class="btn btn-primary btn-lg mt-3">Commencez à écouter</a>
+                <a href="streaming.html" class="btn btn-primary btn-lg mt-3 me-3"><i class="fas fa-play me-2"></i>Commencez à écouter</a>
+                <a href="subscription.html" class="btn btn-outline-light btn-lg mt-3">Voir les offres</a>
             </div>
 
-            <div class="col-md-6 text-center">
-                <img src="/assets/img/stars_speakers.webp" class="img-fluid rounded hero-img">
+            </div>
+    </section>
+
+    <hr class="my-5">
+
+    <section class="features-section container py-5">
+        <h2 class="text-center mb-5 fw-bold">Pourquoi nous choisir ?</h2>
+        <div class="row text-center g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item p-4 border rounded shadow-sm h-100">
+                    <i class="fas fa-compact-disc fa-3x text-primary mb-3"></i>
+                    <h5 class="fw-bold">Bibliothèque illimitée</h5>
+                    <p>Accédez à des millions de chansons et des milliers de podcasts sans publicité (avec l'abonnement Premium).</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item p-4 border rounded shadow-sm h-100">
+                    <i class="fas fa-music fa-3x text-primary mb-3"></i>
+                    <h5 class="fw-bold">Son Haute Fidélité</h5>
+                    <p>Profitez d'une qualité audio supérieure pour une immersion totale dans votre musique préférée.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item p-4 border rounded shadow-sm h-100">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h5 class="fw-bold">Écoute Hors Ligne</h5>
+                    <p>Téléchargez vos titres favoris pour les écouter partout, même sans connexion Internet.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-item p-4 border rounded shadow-sm h-100">
+                    <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                    <h5 class="fw-bold">Recommandations IA</h5>
+                    <p>Notre algorithme vous propose des musiques adaptées à votre humeur et à vos goûts.</p>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- SECTION : PLAYLISTS POPULAIRES -->
-    <section class="popular-section py-5">
+    <hr class="my-5">
+    
+    <section class="popular-section py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Playlists populaires</h2>
+            <h2 class="text-center mb-5 fw-bold">Playlists Populaires du Mois</h2>
 
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card playlist-card">
-                        <img src="/assets/img/playlist1.webp" class="card-img-top">
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card playlist-card h-100 shadow-sm border-0">
+                        <img src="/assets/img/playlist1.webp" class="card-img-top" alt="Image de playlist Hits du moment">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Hits du moment</h5>
-                            <p class="card-text">Les titres les plus écoutés cette semaine.</p>
+                            <h5 class="card-title fw-bold">Hits du moment</h5>
+                            <p class="card-text text-muted">Les titres les plus écoutés cette semaine, mis à jour quotidiennement.</p>
+                            <a href="streaming.html" class="btn btn-outline-dark btn-sm"><i class="fas fa-headphones me-1"></i> Écouter</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card playlist-card">
-                        <img src="/assets/img/playlist2.webp" class="card-img-top">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card playlist-card h-100 shadow-sm border-0">
+                        <img src="/assets/img/playlist2.webp" class="card-img-top" alt="Image de playlist Chill & Relax">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Chill & Relax</h5>
-                            <p class="card-text">Parfait pour se détendre.</p>
+                            <h5 class="card-title fw-bold">Chill & Relax</h5>
+                            <p class="card-text text-muted">Ambiance décontractée et mélodies douces. Parfait pour se détendre.</p>
+                            <a href="streaming.html" class="btn btn-outline-dark btn-sm"><i class="fas fa-headphones me-1"></i> Écouter</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-4">
-                    <div class="card playlist-card">
-                        <img src="/assets/img/playlist3.webp" class="card-img-top">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card playlist-card h-100 shadow-sm border-0">
+                        <img src="/assets/img/playlist3.webp" class="card-img-top" alt="Image de playlist Workout Boost">
                         <div class="card-body text-center">
-                            <h5 class="card-title">Workout Boost</h5>
-                            <p class="card-text">Idéal pour vos séances sportives.</p>
+                            <h5 class="card-title fw-bold">Workout Boost</h5>
+                            <p class="card-text text-muted">Le rythme idéal pour vos séances sportives et vous donner de l'énergie.</p>
+                            <a href="streaming.html" class="btn btn-outline-dark btn-sm"><i class="fas fa-headphones me-1"></i> Écouter</a>
                         </div>
                     </div>
                 </div>
@@ -89,51 +127,166 @@
         </div>
     </section>
 
+    <hr class="my-5">
 
-    <!-- SECTION ARTISTES -->
-    <section class="artists-section container my-5">
-        <h2 class="text-center mb-4">Artistes en tendance</h2>
+    <section class="exclusive-albums-section container py-5">
+        <h2 class="text-center mb-5 fw-bold text-dark">Exclusivités et Nouveautés</h2>
+        
+        <div id="albumCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                
+                <div class="carousel-item active">
+                    <div class="row align-items-center bg-dark text-white p-4 rounded-3 shadow">
+                        <div class="col-md-4 text-center">
+                            <img src="/assets/img/exclusive_album1.webp" class="img-fluid rounded-3 exclusive-album-img" alt="Pochette Album Exclusif 1">
+                        </div>
+                        <div class="col-md-8 p-4">
+                            <span class="badge bg-primary mb-2">NOUVEAUTÉ EXCLUSIVE</span>
+                            <h3 class="fw-bold">The Sonic Journey</h3>
+                            <p class="lead">Artiste Révélation</p>
+                            <p>Un mélange audacieux de synth-pop et de rythmes électroniques qui vous transportera au-delà des étoiles.</p>
+                            <a href="streaming.html" class="btn btn-light mt-3">Écouter l'Album</a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="carousel-item">
+                    <div class="row align-items-center bg-dark text-white p-4 rounded-3 shadow">
+                        <div class="col-md-4 text-center">
+                            <img src="/assets/img/exclusive_album2.webp" class="img-fluid rounded-3 exclusive-album-img" alt="Pochette Album Exclusif 2">
+                        </div>
+                        <div class="col-md-8 p-4">
+                            <span class="badge bg-danger mb-2">LIVE INÉDIT</span>
+                            <h3 class="fw-bold">Acoustic Sessions</h3>
+                            <p class="lead">Artiste Légendaire</p>
+                            <p>Redécouvrez les plus grands succès de cet artiste dans une version live et acoustique intime et bouleversante.</p>
+                            <a href="streaming.html" class="btn btn-light mt-3">Écouter l'Album</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row align-items-center bg-dark text-white p-4 rounded-3 shadow">
+                        <div class="col-md-4 text-center">
+                            <img src="/assets/img/exclusive_album3.webp" class="img-fluid rounded-3 exclusive-album-img" alt="Pochette Album Exclusif 3">
+                        </div>
+                        <div class="col-md-8 p-4">
+                            <span class="badge bg-success mb-2">PREMIÈRE ÉCOUTE</span>
+                            <h3 class="fw-bold">Rhythmic Flow</h3>
+                            <p class="lead">Future Beats</p>
+                            <p>Le nouvel album qui définit la scène Hip-Hop/R&B de demain. Des collaborations surprenantes et des sons innovants.</p>
+                            <a href="streaming.html" class="btn btn-light mt-3">Écouter l'Album</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#albumCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#albumCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </section>
+
+    <hr class="my-5">
+    
+    <section class="testimonials-section container py-5">
+        <h2 class="text-center mb-5 fw-bold">Ce que disent nos utilisateurs</h2>
         <div class="row g-4">
-            <div class="col-md-3">
-                <div class="artist-card text-center p-3 rounded">
-                    <img src="/assets/img/artist1.webp" class="artist-img mb-3">
-                    <h5>Artiste 1</h5>
-                    <p class="small">Pop • 12M abonnés</p>
-                </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote p-4 bg-light rounded shadow-sm border-start border-primary border-5 h-100">
+                    <p class="mb-0 fst-italic">"La qualité audio est tout simplement incroyable. J'ai redécouvert des morceaux que j'adorais ! Les playlists sont toujours à jour."</p>
+                    <footer class="blockquote-footer mt-2">
+                        <cite title="Source Title">Sophie L.</cite> - Utilisatrice Premium
+                    </footer>
+                </blockquote>
             </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote p-4 bg-light rounded shadow-sm border-start border-primary border-5 h-100">
+                    <p class="mb-0 fst-italic">"L'interface est super intuitive et j'adore les recommandations. J'ai découvert tellement de nouveaux artistes grâce à vous."</p>
+                    <footer class="blockquote-footer mt-2">
+                        <cite title="Source Title">Marc D.</cite> - Grand Fan
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="col-md-4">
+                <blockquote class="blockquote p-4 bg-light rounded shadow-sm border-start border-primary border-5 h-100">
+                    <p class="mb-0 fst-italic">"Le mode hors ligne est essentiel pour mes longs trajets. C'est simple, rapide et fiable. Le meilleur service de streaming que j'ai essayé."</p>
+                    <footer class="blockquote-footer mt-2">
+                        <cite title="Source Title">Fatou K.</cite> - Utilisatrice Mobile
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    
+    <hr class="my-5">
 
-            <div class="col-md-3">
-                <div class="artist-card text-center p-3 rounded">
-                    <img src="/assets/img/artist2.webp" class="artist-img mb-3">
-                    <h5>Artiste 2</h5>
-                    <p class="small">Électro • 8M abonnés</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="artist-card text-center p-3 rounded">
-                    <img src="/assets/img/artist3.webp" class="artist-img mb-3">
-                    <h5>Artiste 3</h5>
-                    <p class="small">Rap • 20M abonnés</p>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-                <div class="artist-card text-center p-3 rounded">
-                    <img src="/assets/img/artist4.webp" class="artist-img mb-3">
-                    <h5>Artiste 4</h5>
-                    <p class="small">Rock • 5M abonnés</p>
-                </div>
-            </div>
+    <section class="cta-section bg-primary text-white text-center py-5">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Prêt(e) à commencer votre voyage musical ?</h2>
+            <p class="lead mb-4">Inscrivez-vous gratuitement ou passez à Premium pour une expérience sans limites.</p>
+            <a href="subscription.html" class="btn btn-light btn-lg fw-bold"><i class="fas fa-star me-2"></i>Je passe à Premium</a>
         </div>
     </section>
 
 
-    <!-- FOOTER -->
-    <div class="bg-dark text-white text-center p-3">
-        <p>&copy; 2024 Streaming Musical. Tous droits réservés.</p>
-    </div>
+    <footer class="bg-dark text-white p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold mb-3">Streaming Musical</h5>
+                    <p class="small text-muted">La plateforme idéale pour les mélomanes exigeants. Écoutez, découvrez, partagez.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
 
+                <div class="col-md-2 col-6">
+                    <h5 class="mb-3">Découvrir</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Artistes</a></li>
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Playlists</a></li>
+                        <li><a href="streaming.html" class="text-muted text-decoration-none small">Nouveautés</a></li>
+                        <li><a href="subscription.html" class="text-muted text-decoration-none small">Premium</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <h5 class="mb-3">Aide</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="contact.html" class="text-muted text-decoration-none small">FAQ</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none small">Support</a></li>
+                        <li><a href="terms.html" class="text-muted text-decoration-none small">Conditions d'utilisation</a></li>
+                        <li><a href="privacy.html" class="text-muted text-decoration-none small">Confidentialité</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="mb-3">S'inscrire à la Newsletter</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control form-control-sm" placeholder="Votre email" aria-label="Votre email" required>
+                            <button class="btn btn-primary btn-sm" type="submit">S'inscrire</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="text-center pt-4 border-top border-secondary mt-4">
+                <p class="small text-muted mb-0">&copy; 2024 Streaming Musical. Tous droits réservés.</p>
+            </div>
+
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
