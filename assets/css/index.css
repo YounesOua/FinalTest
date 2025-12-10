@@ -1,0 +1,47 @@
+/* --- TITRE D’ACCUEIL --- */
+.index-title {
+    font-weight: 700;
+    text-align: center;
+    animation: fadeInDown 0.9s ease;
+}
+
+/* Animation d’apparition */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- IMAGE PRINCIPALE --- */
+.index-img {
+    width: 100%;
+    border-radius: 20px !important;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.index-img:hover {
+    transform: scale(1.03);
+}
+
+/* --- PARAGRAPHE & BOUTON --- */
+.index-lead {
+    font-size: 1.2rem;
+}
+
+.index-btn {
+    padding: 12px 28px;
+    font-size: 1.15rem;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.index-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* --- FOOTER --- */
+.index-footer {
+    background: #111 !important;
+    color: #bbb !important;
+}
