@@ -6,56 +6,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - Streaming Musical</title>
     <link rel="stylesheet" href="/assets/css/index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    
+
+    <!-- NAVBAR -->
     <div class="bg-dark text-white p-3">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
                 <a class="navbar-brand" href="index.html">Streaming Musical</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="streaming.html">Streaming</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="streaming.html">Streaming</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 
-    <div class="container my-5">
-        <h1 class="text-center mb-4">Bienvenue sur notre plateforme de Streaming Musical</h1>
-        <div class="row">
+
+    <!-- HERO -->
+    <section class="container my-5 hero-section">
+        <div class="row align-items-center">
             <div class="col-md-6">
-                <img class="rounded" src="/assets/img/stars_speakers.webp" width="600">
-            </div>
-            <div class="col-md-6">
+                <h1 class="display-5 fw-bold mb-4">Bienvenue sur notre plateforme de Streaming Musical</h1>
                 <p class="lead">
-                    Découvrez nos meilleures playlists, artistes et albums. Notre plateforme vous offre une expérience
-                    musicale immersive avec des recommandations personnalisées et un accès à vos morceaux préférés.
+                    Profitez d’une expérience musicale immersive : playlists, artistes tendances, albums exclusifs et recommandations personnalisées.
                 </p>
-                <a href="streaming.html" class="btn btn-primary">Commencez à écouter</a>
+                <a href="streaming.html" class="btn btn-primary btn-lg mt-3">Commencez à écouter</a>
+            </div>
+
+            <div class="col-md-6 text-center">
+                <img src="/assets/img/stars_speakers.webp" class="img-fluid rounded hero-img">
             </div>
         </div>
-    </div>
+    </section>
 
+
+    <!-- SECTION : PLAYLISTS POPULAIRES -->
+    <section class="popular-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Playlists populaires</h2>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card playlist-card">
+                        <img src="/assets/img/playlist1.webp" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Hits du moment</h5>
+                            <p class="card-text">Les titres les plus écoutés cette semaine.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card playlist-card">
+                        <img src="/assets/img/playlist2.webp" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Chill & Relax</h5>
+                            <p class="card-text">Parfait pour se détendre.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card playlist-card">
+                        <img src="/assets/img/playlist3.webp" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Workout Boost</h5>
+                            <p class="card-text">Idéal pour vos séances sportives.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION ARTISTES -->
+    <section class="artists-section container my-5">
+        <h2 class="text-center mb-4">Artistes en tendance</h2>
+
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="artist-card text-center p-3 rounded">
+                    <img src="/assets/img/artist1.webp" class="artist-img mb-3">
+                    <h5>Artiste 1</h5>
+                    <p class="small">Pop • 12M abonnés</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="artist-card text-center p-3 rounded">
+                    <img src="/assets/img/artist2.webp" class="artist-img mb-3">
+                    <h5>Artiste 2</h5>
+                    <p class="small">Électro • 8M abonnés</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="artist-card text-center p-3 rounded">
+                    <img src="/assets/img/artist3.webp" class="artist-img mb-3">
+                    <h5>Artiste 3</h5>
+                    <p class="small">Rap • 20M abonnés</p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="artist-card text-center p-3 rounded">
+                    <img src="/assets/img/artist4.webp" class="artist-img mb-3">
+                    <h5>Artiste 4</h5>
+                    <p class="small">Rock • 5M abonnés</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
     <div class="bg-dark text-white text-center p-3">
         <p>&copy; 2024 Streaming Musical. Tous droits réservés.</p>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-</body>
 
+</body>
 </html>
