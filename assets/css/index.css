@@ -109,7 +109,7 @@ body {
 }
 
 /* --- ARTISTS SECTION (Supprimée dans l'HTML final car remplacée par un carrousel Albums) --- */
-/*
+
 .artists-section {
     padding-bottom: 5rem;
 }
@@ -132,7 +132,7 @@ body {
     border-radius: 50%;
     border: 3px solid var(--primary-color);
 }
-*/
+
 
 /* --- EXCLUSIVE ALBUMS (Carrousel) --- */
 .exclusive-albums-section .carousel-item {

@@ -1,36 +1,140 @@
-/* --- TITRE --- */
-.stream-title {
-    text-align: center;
-    font-weight: 700;
-    animation: fadeIn 1s ease;
+/* Fichier: /assets/css/streaming.css */
+
+/* --- Variables (Pour la cohérence) --- */
+:root {
+    --primary-color: #1DB954; /* Vert caractéristique */
+    --secondary-color: #1AA761;
+    --dark-color: #191414;
+    --light-color: #F8F9FA;
+    --text-color: #333;
 }
 
-/* --- CARTES --- */
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--text-color);
+    background-color: var(--light-color);
+    padding-top: 50px; /* Espace pour la navbar fixe */
+}
+
+/* --- NAVBAR --- */
+.fixed-top {
+    z-index: 1030;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.navbar-brand {
+    color: var(--primary-color) !important;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* --- TITRE PRINCIPAL --- */
+.stream-title {
+    font-weight: 700;
+    color: var(--dark-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* --- FILTRES / CATÉGORIES --- */
+.filters-section {
+    border: 1px solid #ddd;
+}
+
+.genre-btn {
+    border-color: #ccc;
+    color: var(--text-color);
+    transition: all 0.2s ease;
+}
+
+.genre-btn:hover,
+.genre-btn.active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- CARTES DE STREAMING (Morceaux) --- */
 .stream-card {
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .stream-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2) !important;
 }
 
-/* Vidéos */
-.stream-card iframe {
-    height: 200px;
+/* Lecteur Vidéo/Iframe */
+.music-iframe {
+    height: 200px; /* Taille fixe pour l'aperçu du lecteur */
     width: 100%;
-    border-bottom: 3px solid #000;
+    border: none;
 }
 
-/* Titres des cartes */
+.stream-card .card-body {
+    padding: 15px;
+}
+
 .stream-card .card-title {
     font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 5px;
 }
 
-/* Footer */
+/* Boutons Ajouter */
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- PAGINATION --- */
+.page-link {
+    color: var(--dark-color);
+    border-color: #ddd;
+    transition: background-color 0.2s;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.page-link:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+
+/* --- FOOTER --- */
 .stream-footer {
-    background: #111 !important;
+    background-color: var(--dark-color) !important;
     color: #bbb !important;
+}
+
+.stream-footer a {
+    color: var(--primary-color) !important;
+    transition: color 0.3s;
+}
+
+.stream-footer a:hover {
+    color: white !important;
 }
